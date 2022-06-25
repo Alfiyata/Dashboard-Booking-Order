@@ -20,9 +20,9 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="<?=base_url()?>assets/index2.html" class="logo">
+    <a href="<?=base_url('dashboard')?>assets/index2.html" class="logo">
       <span class="logo-mini"><b>A</b>LT</span>
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>System</b>ASD</span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -103,22 +103,13 @@
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          	<span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-        	</span>
-        </div>
-      </form>
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-th-large"></i> <span>Dashboard</span>
           </a>
         </li>
-		<li class="treeview">
+		    <li class="treeview">
           <a href="#">
             <i class="fa fa-cart-plus"></i> <span>Order</span>
           </a>
@@ -128,7 +119,6 @@
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
         </li>
-        <?php if($this->session->userdata('level') == 1) { ?> <!-- membatasi hak akses -->
           <li class="treeview">
             <a href="#">
               <i class="fa fa-pie-chart"></i>
@@ -144,6 +134,12 @@
               <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
             </ul>
           </li>
+        <?php if($this->session->userdata('level') == 1) { ?> <!-- membatasi hak akses -->
+          <li>
+            <a href="<?=site_url('user')?>">
+              <i class="fa fa-user"></i>
+              <span>Add Users</span>
+            </a></li>
         <?php } ?>
       </ul>
     </section>
