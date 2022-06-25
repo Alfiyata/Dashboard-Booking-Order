@@ -16,10 +16,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
-<div class="flash-data4" data-flashdata="<?= $this->session->flashdata('success'); ?>"></div>
-    <?php 
-        if ($this->session->flashdata('success')) : ?>
-    <?php endif; ?>
 <div class="login-box">
   <div class="login-logo">
     <a href="<?=base_url()?>assets/index2.html"><b>Admin</b>Login</a>
@@ -27,6 +23,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
+    <?= $this->session->flashdata('message'); ?>
     <form action="<?=site_url('auth/process')?>" method="post">
       <div class="form-group has-feedback">
         <input type="text" name="username" class="form-control" placeholder="Username">
@@ -46,10 +43,3 @@
 </div>
 </body>
 </html>
-
-<script>
-  <?php if($this->session->flashdata('success')){ ?>
-
-  toastr.success("<?php echo $this->session->flashdata('success'); ?>");
-  <?php } ?>
-</script>

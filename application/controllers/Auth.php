@@ -23,8 +23,10 @@ class Auth extends CI_Controller {
 					'level' => $row->level
 				);
 				$this->session->set_userdata($params);
-				$this->session->set_flashdata('success', 'Success Login');
-				redirect('dashboard');
+				echo "<script>
+				alert('Login Berhasil');
+				window.location='".site_url('dashboard')."';
+				</script>";
 			}
 			else
 			{
