@@ -5,7 +5,7 @@
     </h1>
     <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
-    <li class="active">User data</li>
+    <li class="active">User Edit</li>
     </ol>
 </section>
 
@@ -42,12 +42,15 @@
                             <td><?=$data->address?></td>
                             <td><?=$data->level == 1 ? "Super Admin" : "Admin"?></td>
                             <td class="text-center"width="160px">
-                            <a href="<?=site_url('user/add')?>" class="btn btn-primary btn-xs">
-                                <i class="fa fa-pencil"></i> Edit
-                            </a>
-                            <a href="<?=site_url('user/edit')?>" class="btn btn-danger btn-xs">
-                                <i class="fa fa-trash"></i> Delete
-                            </a>
+                            <form action="<?=site_url('user/delete')?>" method="post">
+                                <a href="<?=site_url('user/edit/'.$data->user_id)?>" class="btn btn-primary btn-xs btn-flat">
+                                    <i class="fa fa-pencil"></i> Edit
+                                </a>
+                                <input type="hidden" name="user_id" value="<?=$data->user_id?>">
+                                <button onclick="return confirm('Are you sure to delete?')" class="btn btn-danger btn-xs btn-flat">
+                                    <i class="fa fa-trash"></i> Delete
+                                </button>
+                            </form>
                             </td>
                         </tr>
                         <?php

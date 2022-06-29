@@ -6,7 +6,7 @@ class M_user extends CI_Model {
 	public function login($post)
 	{
 		$this->db->select('*');
-		$this->db->from('user');
+		$this->db->from('users');
 		$this->db->where('username', $post['username']);
 		$this->db->where('password', $post['password']);
 		$query = $this->db->get();
@@ -15,12 +15,43 @@ class M_user extends CI_Model {
 
 	public function get($id = null)
 	{
-		$this->db->from('user');
+		$this->db->from('users');
 		if ($id !=null) {
 			$this->db->where('user_id', $id);
 		}
 		$query = $this->db->get();
 		return $query;
 	}
+
+	public function add($post)
+	{
+		$params['name'] = $post['fullname'];
+		$params['username'] = $post['user_name'];
+		$params['password'] = $post['password'];
+		$params['address'] = $post['address'] != "" ? $post['address'] : null;
+		$params['level'] = $post['level'];
+		$this->db->insert('users', $params);
+	}
+	
+	public function edit($post)
+	{
+		$params['name'] = $post['fullname'];
+		$params['username'] = $post['user_name'];
+		if(!empty($post['password']))
+		{
+			$params['password'] = $post['password'];
+		}
+		$params['address'] = $post['address'] != "" ? $post['address'] : null;
+		$params['level'] = $post['level'];
+		$this->db->where('user_id', $post['user_id']);
+		$this->db->update('users', $params);
+	}
+	
+	public function delete($id)
+    {
+		$this->db->where('user_id', $id);
+		$this->db->delete('users');
+    }
+
 
 }

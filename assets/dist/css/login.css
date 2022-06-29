@@ -1,0 +1,29 @@
+/* password1 */
+.icon-show-pass {
+    position: relative;
+  }
+  
+  .icon-show-pass input {
+    padding-left: 35px !important;
+  }
+  
+  .icon-show-pass i {
+    position: absolute;
+    right: 0px;
+    padding: 12px 12px;
+  }
+
+  /* password2 */
+  .icon-show-pass2 {
+    position: relative;
+  }
+  
+  .icon-show-pass2 input {
+    padding-left: 35px !important;
+  }
+  
+  .icon-show-pass2 i {
+    position: absolute;
+    right: 0px;
+    padding: 12px 12px;
+  }
