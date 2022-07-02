@@ -135,7 +135,7 @@
               <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
             </ul>
           </li>
-        <?php if($this->session->userdata('level') == 1) { ?> <!-- membatasi hak akses -->
+        <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
           <li>
             <a href="<?=site_url('user')?>">
               <i class="fa fa-user-plus"></i>
