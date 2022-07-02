@@ -105,18 +105,18 @@
         </div>
       </div>
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="treeview">
-          <a href="#">
+        <li>
+          <a href="<?=site_url('dashboard')?>">
             <i class="fa fa-th-large"></i> <span>Dashboard</span>
           </a>
         </li>
-		    <li class="treeview">
+		    <li>
           <a href="#">
             <i class="fa fa-cart-plus"></i> <span>Order</span>
           </a>
         </li>
-        <li class="treeview">
-          <a href="#">
+        <li>
+          <a href="<?=site_url('supplier')?>">
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
         </li>
