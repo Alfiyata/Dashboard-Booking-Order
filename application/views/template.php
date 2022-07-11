@@ -116,6 +116,11 @@
           </a>
         </li>
         <li>
+          <a href="<?=site_url('customer')?>">
+            <i class="fa fa-user"></i> <span>Customer</span>
+          </a>
+        </li>
+        <li>
           <a href="<?=site_url('supplier')?>">
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
@@ -149,7 +154,6 @@
   <div class="content-wrapper">
     <?php echo $contents ?>
   </div>
-
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
@@ -157,7 +161,6 @@
     <strong>Copyright &copy; 2021-2022 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
     reserved.
   </footer>
-  <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 

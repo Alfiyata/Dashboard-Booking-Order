@@ -22,7 +22,6 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <?php //echo validation_errors() ?>
                         <form action="" method="post">
                             <div class="col-md-6">
                                 <div class="form-group <?=form_error('fullname') ? 'has-error' : null ?>">

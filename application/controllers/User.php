@@ -20,8 +20,9 @@ class User extends CI_Controller {
 
     public function add()
     {
+
         $this->form_validation->set_rules('fullname', 'Name', 'required');
-        $this->form_validation->set_rules('user_name', 'User Name', 'required|min_length[5]|is_unique[user.username]');
+        $this->form_validation->set_rules('user_name', 'User Name', 'required|min_length[5]|is_unique[users.username]');
         $this->form_validation->set_rules('password', 'Pasword', 'required|min_length[5]');
         $this->form_validation->set_rules('repassword', 'Confrim Password', 'required|matches[password]',
             array('matches' => '%s not be same')
