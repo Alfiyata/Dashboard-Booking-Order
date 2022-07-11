@@ -22,43 +22,42 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="<?=site_url('customer/process')?>" method="post">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Customer Name*</label>
-                                    <input type="hidden" name="id" value="<?=$row->customer_id?>">
-                                    <input type="text" name="customer_name" id="customer_name" class="form-control" value="<?=$row->name?>" required>
-                                </div>
+                    <form action="<?=site_url('customer/process')?>" method="post">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Customer Name*</label>
+                                <input type="hidden" name="id" value="<?=$row->customer_id?>">
+                                <input type="text" name="customer_name" id="customer_name" class="form-control" value="<?=$row->name?>" required>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Gender</label>
-                                    <select name="gender" id="gender" class="form-control" required>
-                                        <option value="">Pilih</option>
-                                        <option value="L" <?= $row->gender == 'L' ? 'selected' : '' ?>>Laki-Laki</option>
-                                        <option value="P" <?= $row->gender == 'P' ? 'selected' : '' ?>>Perempuan</option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Gender</label>
+                                <select name="gender" id="gender" class="form-control" required>
+                                    <option value="">Pilih</option>
+                                    <option value="L" <?= $row->gender == 'L' ? 'selected' : '' ?>>Laki-Laki</option>
+                                    <option value="P" <?= $row->gender == 'P' ? 'selected' : '' ?>>Perempuan</option>
+                                </select>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Phone*</label>
-                                    <input type="number" name="customer_phone" id="customer_phone" class="form-control" value="<?=$row->phone?>" required>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Phone*</label>
+                                <input type="number" name="customer_phone" id="customer_phone" class="form-control" value="<?=$row->phone?>" required>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Address*</label>
-                                    <textarea type="text" name="customer_address" id="customer_address" class="form-control" required><?=$row->address?></textarea>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Address*</label>
+                                <textarea type="text" name="customer_address" id="customer_address" class="form-control" required><?=$row->address?></textarea>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <button type="submit" name="<?=$page?>" class="btn btn-success btn-flat">Save</button>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <button type="submit" name="<?=$page?>" class="btn btn-success btn-flat">Save</button>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

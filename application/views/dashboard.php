@@ -7,10 +7,8 @@
         <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
         <li class="active">Dashboard</li>
       </ol>
-    </section>
+  </section>
 
     <section class="content">
-      <div class="row">
-	  	
-	  </div>
+      dashboard page
     </section>

@@ -22,39 +22,38 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="<?=site_url('supplier/process')?>" method="post">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Supplier Name*</label>
-                                    <input type="hidden" name="id" value="<?=$row->supplier_id?>">
-                                    <input type="text" name="supplier_name" id="supplier_name" class="form-control" value="<?=$row->name?>" required>
-                                </div>
+                    <form action="<?=site_url('supplier/process')?>" method="post">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Supplier Name*</label>
+                                <input type="hidden" name="id" value="<?=$row->supplier_id?>">
+                                <input type="text" name="supplier_name" id="supplier_name" class="form-control" value="<?=$row->name?>" required>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Phone*</label>
-                                    <input type="number" name="supplier_phone" id="supplier_phone" class="form-control" value="<?=$row->phone?>" required>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Phone*</label>
+                                <input type="number" name="supplier_phone" id="supplier_phone" class="form-control" value="<?=$row->phone?>" required>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Address*</label>
-                                    <textarea type="text" name="supplier_address" id="supplier_address" class="form-control" required><?=$row->address?></textarea>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Address*</label>
+                                <textarea type="text" name="supplier_address" id="supplier_address" class="form-control" required><?=$row->address?></textarea>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Description</label>
-                                    <textarea type="text" name="desc" id="desc" class="form-control"><?=$row->description?></textarea>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Description</label>
+                                <textarea type="text" name="desc" id="desc" class="form-control"><?=$row->description?></textarea>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <button type="submit" name="<?=$page?>" class="btn btn-success btn-flat">Save</button>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <button type="submit" name="<?=$page?>" class="btn btn-success btn-flat">Save</button>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

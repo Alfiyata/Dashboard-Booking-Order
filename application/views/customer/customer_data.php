@@ -10,6 +10,7 @@
 </section>
 
 <section class="content">
+    <?php $this->view('message') ?>
     <div class="box">
         <div class="box-header">
             <h3 class="box-tittle">Data customers</h3>
@@ -32,29 +33,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                            $no = 1;
-                            foreach($row->result() as $key => $data) { ?>
-                        <tr>
-                            <td><?= $no++ ?></td>
-                            <td><?=$data->name?></td>
-                            <td><?=$data->gender?></td>
-                            <td><?=$data->phone?></td>
-                            <td><?=$data->address?></td>
-                            <td class="text-center"width="160px">
-                                <a href="<?=site_url('customer/edit/'.$data->customer_id)?>" class="btn btn-primary btn-xs btn-flat">
-                                    <i class="fa fa-pencil"></i> Update
-                                </a>
-                                <a href="<?=site_url('customer/delete/'.$data->customer_id)?>" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger btn-xs btn-flat">
-                                    <i class="fa fa-trash"></i> Delete
-                                </a>
-                            </td>
-                        </tr>
-                        <?php
-                        }?>
-                    </tbody>
-                </table>
-            </div>
+                    <?php
+                        $no = 1;
+                        foreach($row->result() as $key => $data) { ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?=$data->name?></td>
+                        <td><?=$data->gender?></td>
+                        <td><?=$data->phone?></td>
+                        <td><?=$data->address?></td>
+                        <td class="text-center"width="160px">
+                            <a href="<?=site_url('customer/edit/'.$data->customer_id)?>" class="btn btn-primary btn-xs btn-flat">
+                                <i class="fa fa-pencil"></i> Update
+                            </a>
+                            <a href="<?=site_url('customer/delete/'.$data->customer_id)?>" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger btn-xs btn-flat">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <?php
+                    }?>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>

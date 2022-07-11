@@ -16,14 +16,14 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
     <a href="<?=base_url('dashboard')?>assets/index2.html" class="logo">
-      <span class="logo-mini"><b>A</b>LT</span>
-      <span class="logo-lg"><b>System</b>ASD</span>
+      <span class="logo-mini"><b>P</b>OS</span>
+      <span class="logo-lg"><b>System</b>POS</span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -67,12 +67,12 @@
           </li>
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?=$this->fungsi->user_login()->username?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
-                <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                 <p>
                   <?=ucfirst($this->fungsi->user_login()->name)?>
                   <small><?=ucfirst($this->fungsi->user_login()->address)?></small>
@@ -97,7 +97,7 @@
     <section class="sidebar">
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?=ucfirst($this->fungsi->user_login()->name)?></p>
@@ -127,17 +127,16 @@
         </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-pie-chart"></i>
-              <span>Dropdown</span>
+              <i class="fa fa-archive"></i>
+              <span>Products</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-              <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-              <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-              <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+              <li><a href="<?=site_url('category')?>"><i class="fa fa-circle-o"></i> Categories</a></li>
+              <li><a href="<?=site_url('unit')?>"><i class="fa fa-circle-o"></i> Units</a></li>
+              <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Items</a></li>
             </ul>
           </li>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
@@ -154,13 +153,14 @@
   <div class="content-wrapper">
     <?php echo $contents ?>
   </div>
+  
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
     <strong>Copyright &copy; 2021-2022 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
     reserved.
-  </footer>
+</footer>
 </div>
 <!-- ./wrapper -->
 
