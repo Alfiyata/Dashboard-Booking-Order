@@ -67,9 +67,9 @@ class Supplier extends CI_Controller {
 
 		if($this->db->affected_rows() > 0)
 		{
-			echo "<script>alert('Data berhasil disimpan');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil di simpan');
 		}
-		echo "<script>window.location='".site_url('supplier')."';</script>";
+		redirect('supplier');
 	}
 
 	public function delete($id)
@@ -77,8 +77,8 @@ class Supplier extends CI_Controller {
 		$this->M_supplier->delete($id);
 		if($this->db->affected_rows() > 0)
 		{
-			echo "<script>alert('Data berhasil dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil di hapus');
 		}
-		echo "<script>window.location='".site_url('supplier')."';</script>";
+		redirect('supplier');
 	}
 }

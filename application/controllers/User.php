@@ -43,9 +43,9 @@ class User extends CI_Controller {
             $this->M_user->add($post);
             if($this->db->affected_rows() > 0)
             {
-                echo "<script>alert('Success Add User');</script>";
+                $this->session->set_flashdata('success', 'Add user');
             }
-            echo "<script>window.location='".site_url('user')."';</script>";
+            redirect('user');
         }
         
     }
@@ -93,9 +93,9 @@ class User extends CI_Controller {
             $this->M_user->edit($post);
             if($this->db->affected_rows() > 0)
             {
-                echo "<script>alert('Success Edit User');</script>";
+                $this->session->set_flashdata('success', 'Edit user');
             }
-            echo "<script>window.location='".site_url('user')."';</script>";
+            redirect('user');
         }
         
     }
@@ -122,8 +122,8 @@ class User extends CI_Controller {
 
         if($this->db->affected_rows() > 0)
         {
-            echo "<script>alert('Success Delete User');</script>";
+            $this->session->set_flashdata('success', 'Delete user');
         }
-        echo "<script>window.location='".site_url('user')."';</script>";
+        redirect('user');
     }
 }
