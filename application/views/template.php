@@ -8,6 +8,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/skins/_all-skins.min.css">
@@ -105,27 +106,27 @@
         </div>
       </div>
       <ul class="sidebar-menu" data-widget="tree">
-        <li>
+        <li <?=$this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'class="active"' : ''?>>
           <a href="<?=site_url('dashboard')?>">
             <i class="fa fa-th-large"></i> <span>Dashboard</span>
           </a>
         </li>
-		    <li>
+		    <li <?=$this->uri->segment(1) == 'order' ? 'class="active"' : ''?>>
           <a href="#">
             <i class="fa fa-cart-plus"></i> <span>Order</span>
           </a>
         </li>
-        <li>
+        <li <?=$this->uri->segment(1) == 'customer' ? 'class="active"' : ''?>>
           <a href="<?=site_url('customer')?>">
             <i class="fa fa-user"></i> <span>Customer</span>
           </a>
         </li>
-        <li>
+        <li <?=$this->uri->segment(1) == 'supplier' ? 'class="active"' : ''?>>
           <a href="<?=site_url('supplier')?>">
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
         </li>
-          <li class="treeview">
+          <li class="treeview <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'unit' ? 'active' : ''?>">
             <a href="#">
               <i class="fa fa-archive"></i>
               <span>Products</span>
@@ -134,13 +135,13 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?=site_url('category')?>"><i class="fa fa-circle-o"></i> Categories</a></li>
-              <li><a href="<?=site_url('unit')?>"><i class="fa fa-circle-o"></i> Units</a></li>
+              <li <?=$this->uri->segment(1) == 'category' ? 'class="active"' : ''?>><a href="<?=site_url('category')?>"><i class="fa fa-circle-o"></i> Categories</a></li>
+              <li <?=$this->uri->segment(1) == 'unit' ? 'class="active"' : ''?>><a href="<?=site_url('unit')?>"><i class="fa fa-circle-o"></i> Units</a></li>
               <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Items</a></li>
             </ul>
           </li>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
-          <li>
+          <li <?=$this->uri->segment(1) == 'user' ? 'class="active"' : ''?>>
             <a href="<?=site_url('user')?>">
               <i class="fa fa-user-plus"></i>
               <span>Add Users</span>
@@ -171,9 +172,12 @@
 <script src="<?=base_url()?>assets/bower_components/fastclick/lib/fastclick.js"></script>
 <script src="<?=base_url()?>assets/dist/js/adminlte.min.js"></script>
 <script src="<?=base_url()?>assets/dist/js/demo.js"></script>
+<script src="<?=base_url()?>assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?=base_url()?>assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
+    $('#table1').DataTable()
   })
 </script>
 </body>

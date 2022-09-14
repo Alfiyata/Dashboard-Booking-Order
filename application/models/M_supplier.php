@@ -20,6 +20,7 @@ class M_supplier extends CI_Model {
 			'phone' => $post['supplier_phone'],
 			'address' => $post['supplier_address'],
 			'description' => empty($post['desc']) ? null : $post['desc'],
+			'created' => date('Y-m-d H:i:s')
 		];
 		$this->db->insert('supplier', $params);
 	}
