@@ -27,12 +27,19 @@ class item extends CI_Controller {
 		$item->name = null;
         $item->price = null;
 
-        $category = $this->M_category->get();
+        $query_category = $this->M_category->get();
+
+		$query_unit = $this->M_unit->get();
+		$unit[null] = '-Pilih-';
+		foreach ($query_unit->result() as $unt) {
+			$unit[$unt->unit_id] = $unt->name;
+		}
 
 		$data = array(
 			'page' => 'add',
 			'row' => $item,
-            'category' => $category,
+            'category' => $query_category,
+			'unit' => $unit, 'selectedunit' => null,
 		);
 		$this->template->load('template', 'product/item/item_form', $data);
 	}

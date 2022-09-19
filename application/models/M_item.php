@@ -16,7 +16,12 @@ class M_item extends CI_Model {
 	public function add($post)
 	{
 		$params = [
-			'name' => $post['item_name'],
+			'barcode' => $post['barcode'],
+			'name' => $post['product_name'],
+			'category_id' => $post['category'],
+			'unit_id' => $post['unit'],
+			'price' => $post['price'],
+			'created' => date('Y-m-d H:i:s')
 		];
 		$this->db->insert('item', $params);
 	}
@@ -24,7 +29,11 @@ class M_item extends CI_Model {
 	public function edit($post)
 	{
 		$params = [
-			'name' => $post['item_name'],
+			'barcode' => $post['barcode'],
+			'name' => $post['product_name'],
+			'category_id' => $post['category'],
+			'unit_id' => $post['unit'],
+			'price' => $post['price'],
 			'updated' => date('Y-m-d H:i:s')
 		];
 		$this->db->where('item_id', $post['id']);
