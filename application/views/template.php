@@ -126,7 +126,7 @@
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
         </li>
-          <li class="treeview <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'unit' ? 'active' : ''?>">
+          <li class="treeview <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'unit' || $this->uri->segment(1) == 'item' ? 'active' : ''?>">
             <a href="#">
               <i class="fa fa-archive"></i>
               <span>Products</span>
@@ -137,7 +137,7 @@
             <ul class="treeview-menu">
               <li <?=$this->uri->segment(1) == 'category' ? 'class="active"' : ''?>><a href="<?=site_url('category')?>"><i class="fa fa-circle-o"></i> Categories</a></li>
               <li <?=$this->uri->segment(1) == 'unit' ? 'class="active"' : ''?>><a href="<?=site_url('unit')?>"><i class="fa fa-circle-o"></i> Units</a></li>
-              <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Items</a></li>
+              <li <?=$this->uri->segment(1) == 'item' ? 'class="active"' : ''?>><a href="<?=site_url('item')?>"><i class="fa fa-circle-o"></i> Items</a></li>
             </ul>
           </li>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
