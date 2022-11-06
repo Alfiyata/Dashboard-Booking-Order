@@ -26,6 +26,7 @@ class item extends CI_Controller {
         $item->barcode = null;
 		$item->name = null;
         $item->price = null;
+		$item->category_id = null;
 
         $query_category = $this->M_category->get();
 
@@ -78,11 +79,27 @@ class item extends CI_Controller {
 		$post = $this->input->post(null, TRUE);
 		if(isset($_POST['add']))
 		{
-			$this->M_item->add($post);
+			if($this->M_item->check_barcode($post['barcode'])->num_rows() > 0)
+			{
+				$this->session->set_flashdata('error', "Barcode $post[barcode] sudah terpakai item lain");
+				redirect('item/add');
+			}
+			else
+			{
+				$this->M_item->add($post);
+			}
 		}
 		elseif (isset($_POST['edit']))
 		{
-			$this->M_item->edit($post);
+			if($this->M_item->check_barcode($post['barcode'], $post['id'])->num_rows() > 0)
+			{
+				$this->session->set_flashdata('error', "Barcode $post[barcode] sudah terpakai item lain");
+				redirect('item/edit/'.$post['id']);
+			}
+			else
+			{
+				$this->M_item->edit($post);
+			}
 		}
 
 		if($this->db->affected_rows() > 0)

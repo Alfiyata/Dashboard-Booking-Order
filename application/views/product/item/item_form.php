@@ -10,6 +10,7 @@
 </section>
 
 <section class="content">
+<?php $this->view('message') ?>
     <div class="box">
         <div class="box-header">
             <div class="pull-right" style="margin-right:20px;">
@@ -35,10 +36,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Category*</label>
-                                <select name="category" class="form-control">
+                                <select name="category" class="form-control" required>
                                     <option value="">-Pilih-</option>
                                     <?php foreach($category->result()as $key => $data) { ?>
-                                        <option value="<?=$data->category_id?>"<?=$data->category_id == $row->category_id ? "selected" : null?>><?=$data->name?></option>
+                                        <option value="<?=$data->category_id?>" <?=$data->category_id == $row->category_id ? "selected" : null ?>><?=$data->name?></option>
+                                        
                                     <?php } ?>
                                 </select>
                             </div>
