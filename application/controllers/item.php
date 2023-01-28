@@ -44,6 +44,7 @@ class item extends CI_Controller {
             'category' => $query_category,
 			'unit' => $unit, 'selectedunit' => null,
 		);
+		
 		$this->template->load('template', 'product/item/item_form', $data);
 	}
 

@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'          => 'pgsql:host=localhost;dbname=postgres',
 	'hostname'     => 'localhost',
 	'username'     => 'postgres',
-	'password'     => 'haistar123!',
+	'password'     => '123',
 	'database'     => 'postgres',
 	'dbdriver'     => 'pdo',
 	'port'         => '5432',
