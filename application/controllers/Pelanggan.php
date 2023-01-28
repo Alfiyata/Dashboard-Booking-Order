@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pelanggan extends CI_Controller {
+class Pelanggan extends CI_Controller {
 
 	function __construct()
     {
@@ -9,10 +9,11 @@ class pelanggan extends CI_Controller {
         check_not_login();
         $this->load->model('M_customer');
     }
-
+	
 	public function index()
 	{
-
+		
+		echo json_encode("oke");exit;
 		$data['row'] = $this->M_customer->get();
 		$this->template->load('template', 'customer/customer_data', $data);
 	}

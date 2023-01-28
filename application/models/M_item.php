@@ -5,6 +5,7 @@ class M_item extends CI_Model {
 
     public function get($id = null)
 	{
+		$ci =& get_instance();
 		$this->db->select('item.*, category.name as category_name, unit.name as unit_name');
 		$this->db->from('item');
 		$this->db->join('category', 'category.category_id = item.category_id');
@@ -12,31 +13,37 @@ class M_item extends CI_Model {
 		if ($id !=null) {
 			$this->db->where('item_id', $id);
 		}
+		$this->db->where('item.created_by', $ci->session->userdata('userid'));
 		$query = $this->db->get();
 		return $query;
 	}
 
 	public function add($post)
 	{
+		$ci =& get_instance();
 		$params = [
 			'barcode' => $post['barcode'],
 			'name' => $post['product_name'],
 			'category_id' => $post['category'],
 			'unit_id' => $post['unit'],
 			'price' => $post['price'],
+			'created_by' => $ci->session->userdata('userid'),
 			'created' => date('Y-m-d H:i:s')
 		];
+
 		$this->db->insert('item', $params);
 	}
 
 	public function edit($post)
 	{
+		$ci =& get_instance();
 		$params = [
 			'barcode' => $post['barcode'],
 			'name' => $post['product_name'],
 			'category_id' => $post['category'],
 			'unit_id' => $post['unit'],
 			'price' => $post['price'],
+			'created_by' => $ci->session->userdata('userid'),
 			'updated' => date('Y-m-d H:i:s')
 		];
 		$this->db->where('item_id', $post['id']);
