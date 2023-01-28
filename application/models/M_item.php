@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_item extends CI_Model {
 
+	public function user_id()
+	{
+		$this->db->where('item.user_id', $this->session->userdata('id_user'));
+		return $this->db->get('item')->result();
+	}
+
     public function get($id = null)
 	{
 		$ci =& get_instance();
@@ -12,9 +18,11 @@ class M_item extends CI_Model {
 		$this->db->join('unit', 'unit.unit_id = item.unit_id');
 		if ($id !=null) {
 			$this->db->where('item_id', $id);
+			$this->db->where('item.created_by', $ci->session->userdata('userid'));
 		}
-		$this->db->where('item.created_by', $ci->session->userdata('userid'));
+		$this->db->order_by('barcode', 'asc');
 		$query = $this->db->get();
+		echo json_encode($query);exit;
 		return $query;
 	}
 
@@ -28,7 +36,7 @@ class M_item extends CI_Model {
 			'unit_id' => $post['unit'],
 			'price' => $post['price'],
 			'created_by' => $ci->session->userdata('userid'),
-			'created' => date('Y-m-d H:i:s')
+			'image' => $post['image'],
 		];
 
 		$this->db->insert('item', $params);
@@ -46,6 +54,12 @@ class M_item extends CI_Model {
 			'created_by' => $ci->session->userdata('userid'),
 			'updated' => date('Y-m-d H:i:s')
 		];
+
+		if($post['image'] != null)
+		{
+			$params['image'] = $post['image'];
+		}
+		
 		$this->db->where('item_id', $post['id']);
 		$this->db->update('item', $params);
 	}
