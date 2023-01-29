@@ -77,6 +77,12 @@ class item extends CI_Controller {
 	
 	public function process()
 	{
+		$config['upload_path']          = './uploads/product/';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		$config['max_size']             = 1024;
+		$config['file-name']            = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
+		$this->load->library('upload', $config);
+
 		$post = $this->input->post(null, TRUE);
 		if(isset($_POST['add']))
 		{
@@ -87,7 +93,35 @@ class item extends CI_Controller {
 			}
 			else
 			{
-				$this->M_item->add($post);
+				if(@$_FILES['image']['name'] != null)
+				{
+					if($this->upload->do_upload('image'))
+					{
+						$post['image'] = $this->upload->data('file_name');
+						$this->M_item->add($post);
+						if($this->db->affected_rows() > 0)
+						{
+							$this->session->set_flashdata('success', 'Data berhasil di simpan');
+						}
+						redirect('item');
+					}
+					else
+					{
+						$error = $this->upload->display_errors();
+						$this->session->set_flashdata('error', $error);
+						redirect('item/add');
+					}
+				}
+					else
+					{
+						$post['image'] = null;
+						$this->M_item->add($post);
+						if($this->db->affected_rows() > 0)
+						{
+							$this->session->set_flashdata('success', 'Data berhasil di simpan');
+						}
+						redirect('item');
+					}
 			}
 		}
 		elseif (isset($_POST['edit']))
@@ -99,19 +133,53 @@ class item extends CI_Controller {
 			}
 			else
 			{
-				$this->M_item->edit($post);
+				if(@$_FILES['image']['name'] != null)
+				{
+					if($this->upload->do_upload('image'))
+					{
+						$item = $this->M_item->get($post['id'])->row();
+						if($item->image != null){
+							$target_file = './uploads/product/'.$item->image;
+							unlink($target_file);
+						}
+
+						$post['image'] = $this->upload->data('file_name');
+						$this->M_item->edit($post);
+						if($this->db->affected_rows() > 0)
+						{
+							$this->session->set_flashdata('success', 'Data berhasil di simpan');
+						}
+						redirect('item');
+					}
+					else
+					{
+						$error = $this->upload->display_errors();
+						$this->session->set_flashdata('error', $error);
+						redirect('item/add');
+					}
+				}
+					else
+					{
+						$post['image'] = null;
+						$this->M_item->edit($post);
+						if($this->db->affected_rows() > 0)
+						{
+							$this->session->set_flashdata('success', 'Data berhasil di simpan');
+						}
+						redirect('item');
+					}
 			}
 		}
-
-		if($this->db->affected_rows() > 0)
-		{
-			$this->session->set_flashdata('success', 'Data berhasil di simpan');
-		}
-		redirect('item');
 	}
 
 	public function delete($id)
 	{
+		$item = $this->M_item->get($id['id'])->row();
+		if($item->image != null){
+			$target_file = './uploads/product/'.$item->image;
+			unlink($target_file);
+		}
+		
 		$this->M_item->delete($id);
 		if($this->db->affected_rows() > 0)
 		{

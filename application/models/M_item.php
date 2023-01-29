@@ -27,6 +27,7 @@ class M_item extends CI_Model {
 			'category_id' => $post['category'],
 			'unit_id' => $post['unit'],
 			'price' => $post['price'],
+			'image' => $post['image'],
 			'created_by' => $ci->session->userdata('userid'),
 			'created' => date('Y-m-d H:i:s')
 		];
@@ -46,6 +47,11 @@ class M_item extends CI_Model {
 			'created_by' => $ci->session->userdata('userid'),
 			'updated' => date('Y-m-d H:i:s')
 		];
+
+		if($post['image'] != null)
+		{
+			$params['image'] = $post['image'];
+		}
 		$this->db->where('item_id', $post['id']);
 		$this->db->update('item', $params);
 	}

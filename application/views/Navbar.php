@@ -5,14 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Lastive</title>
-      <link rel="icon" href="<?php echo base_url() ?>assets/img/logo-only.png">
+      <title>Lashtive</title>
+      <link rel="icon" href="<?php echo base_url() ?>assets/img/website/Lashtive.png">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-      <link rel="stylesheet" href="<?=base_url()?>assets/css/home/style.css">
-      <!-- <link rel="stylesheet" href="<?=base_url()?>assets/css/service.css">
-      <link rel="stylesheet" href="<?=base_url()?>assets/css/location.css">
-      <link rel="stylesheet" href="<?=base_url()?>assets/css/about.css">
-      <link rel="stylesheet" href="<?=base_url()?>assets/css/news.css"> -->
+      <link rel="stylesheet" href="<?=base_url()?>assets/css/website/style.css">
+      <link rel="stylesheet" href="<?=base_url()?>assets/css/website/service.css">
+      <link rel="stylesheet" href="<?=base_url()?>assets/css/website/location.css">
+      <link rel="stylesheet" href="<?=base_url()?>assets/css/website/about.css">
 </head>
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -23,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="header-7-2 " style="font-family: 'Inter', sans-serif">
             <div class="container-xxl mx-auto p-0 position-sticky" style="z-index: 50;top: 0;">
                 <nav class="header-sticky navbar navbar-expand-lg navbar-light">
-                    <img style="width: 90px; height: 90px;" src="<?=base_url()?>assets/img/logo.svg" alt="Logo" />
+                    <img style="width: 100px; height: 100px;" src="<?=base_url()?>assets/img/website/Lashtive.png" alt="Logo" />
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -35,9 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a class="nav-link" aria-current="page" href="<?=site_url('home')?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?=site_url('service')?>">Service</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="<?=site_url('location')?>">Location</a>
                             </li>
                             <li class="nav-item">
@@ -45,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                         </ul>
                         <div class="d-flex">
-                            <a class="btn btn-header" href="https://wa.link/g1ne1x">Booking Now!</a>
+                            <a class="btn btn-header" href="<?= site_url('./')?>">Booking Now!</a>
                         </div>
                     </div>
                 </nav>
@@ -61,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div
                   class="container d-flex justify-content-between align-items-center m-auto flex-lg-row flex-column-reverse gap-4 position-relative">
                   <nav class="text-base d-flex align-items-center gap-3 text-gray-1">
-                      <img src="<?=base_url()?>assets/img/logo+name.svg" alt="logo" style="width: 100px;">
+                      <img src="<?=base_url()?>assets/img/website/Lashtive.png" alt="logo" style="width: 100px;">
                     <p class="text-gray-1 m-0">© 2022 All rights reserved</p>
                   </nav>
                   <div class="topnav-centered">
