@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+      * {
+        font-family: 'Inter', sans-serif !important;
+      }
+
+      body .img-best-user-reviewss {
+        /* z-index: -1 !important; */
+        right: 0 !important;
+        position: absolute;
+        margin-top: 100px;
+        margin-right: 100px;
+        width: 30%;
+      }
+
+      body .best-user-reviewss {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      body .best-user-reviewss h1 {
+        color: #232323;
+        font-weight: 700 !important;
+      }
+
+      .best-user-reviewss .star-img-rating {
+        width: 24px !important;
+        height: 24px;
+        object-fit: cover;
+      }
+
+      @media screen and (min-width: 768px) {
+        body .best-user-reviewss {
+          padding-bottom: 188px;
+        }
+
+        body .best-user-reviewss h1 {
+          font-size: 60px !important;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        body .best-user-reviewss .container {
+          padding-top: 120px;
+        }
+
+        body .best-user-reviewss .container h1 {
+          width: 722px;
+          font-size: 60px;
+          line-height: 90px !important;
+        }
+      }
+
+      body .best-user-reviewss .container h1 {
+        line-height: 50px;
+        font-weight: 700 !important;
+      }
+
+      body .best-user-reviewss .container .testi-text {
+        line-height: 28px;
+        color: #9C9C9C;
+      }
+
+      @media screen and (min-width: 768px) {
+        body .best-user-reviewss .container .testi-text {
+          width: 500px;
+        }
+      }
+
+      body .best-user-reviewss .container .card {
+        border-radius: 28px;
+        border: none !important;
+        -webkit-box-shadow: 20px 8px 18px rgba(178, 177, 255, 0.05);
+        box-shadow: 20px 8px 18px rgba(178, 177, 255, 0.05);
+      }
+
+      body .best-user-reviewss .container .card p {
+        color: #9C9C9C;
+      }
+
+      body .cl-orange {
+        color: #FF9900;
+      }
+
+      body .cl-dusty-grey {
+        color: #9C9C9C;
+      }
+
+      body .place .img-place-header {
+        width: 100% !important;
+      }
+
+      .btn-card-item {
+        font: 600 0.75rem/1rem "Red Hat Display", sans-serif;
+        background-color: #7789b6;
+        color: #ffffff;
+        transition: 0.3s;
+        padding: 0.525rem 2.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .btn-card-item:hover {
+        background-color: #132247;
+        color: #ffffff;
+        transition: 0.3s;
+    }
+
+
+      @media (min-width: 768px) {
+        .best-user-reviewss {
+            margin-top: -180px !important;
+          }
+        }

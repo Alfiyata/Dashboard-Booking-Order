@@ -58,11 +58,30 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <div class="form-group <?=form_error('phone') ? 'has-error' : null ?>">
+                                <label for="name">Phone Number*</label>
+                                <input type="text" name="phone" id="phone" class="form-control" value="<?=set_value('phone') ?>">
+                                <span class="help-block"><?=form_error('phone')?></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">Address</label>
                                 <textarea name="address" id="address" class="form-control" value="<?=set_value('address') ?>"></textarea>
                                 <?=form_error('address')?>
                             </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group <?=form_error('gender') ? 'has-error' : null ?>">
+                                <label for="name">Gender*</label>
+                                <select name="gender" id="gender" class="form-control">
+                                    <option value="">Pilih</option>
+                                    <option value="1" <?=set_value('gender') == 1 ? "selected" : null ?>>Male</option>
+                                    <option value="2" <?=set_value('gender') == 2 ? "selected" : null ?>>female</option>
+                                </select>
+                                <span class="help-block"><?=form_error('gender')?></span>
+                            </div>
+                            <br>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group <?=form_error('level') ? 'has-error' : null ?>">

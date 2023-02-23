@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * {
+        font-family: 'Red Hat Display', sans-serif !important;
+      }
+
+
+.header-7-3 .btn-contact {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0rem;
+    color: #FDBC12;
+    border: 1px solid #FDBC12;
+    transition: 0.2s;
+}
+
+.header-7-3 .btn-contact:hover {
+    color: #ffffff;
+    background-color: #FDBC12;
+    border-color: #FDBC12;
+    transition: 0.2s;
+}
+
+.header-7-3 .btn-contact:hover path {
+    fill: #ffffff;
+    transition: 0.2s;
+}
+
+.header-7-3 .rectangle {
+    z-index: 10;
+    position: absolute;
+    top: 2.25rem;
+    right: 0px;
+}
+
+.header-7-3 .owl-carousel .owl-nav button.owl-next,
+.header-7-3 .owl-carousel .owl-nav button.owl-prev {
+    padding: 14px !important;
+}
+
+.header-7-3 .owl-carousel .owl-nav button.owl-prev {
+    background-color: #f8fcfe;
+}
+
+.header-7-3 .owl-carousel .owl-nav button.owl-next,
+.header-7-3 .owl-theme .owl-nav button.owl-prev:hover {
+    background-color: #e4ecff;
+}
+
+.header-7-3 .owl-theme .owl-nav button.owl-next:hover {
+    background-color: #5f74a7
+}
+
+.header-7-3 .owl-theme .owl-nav {
+    margin-top: 20px;
+}
+
+.header-7-3 .carousel-number {
+    color: #2c3a4f;
+    font-size: 9rem;
+    line-height: 0.8;
+}
+
+.header-7-3 .owl-theme .owl-nav .owl-next {
+    margin: 5px 5px 5px 16px;
+}
+
+.header-7-3 .title-font {
+    font: normal 2.25rem/1.25 "Red Hat Display", sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    color: #113873;
+}
+
+.header-7-3 .caption-font {
+    font: normal 1rem/2rem "Red Hat Display", sans-serif;
+    margin-bottom: 2rem;
+    letter-spacing: 0.025em;
+    color: #2c3a4f;
+}
+
+.header-7-3 .main-top {
+    padding: 3rem 2rem 2.75rem;
+}
+
+.header-7-3 .main-bottom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+}
+
+.header-7-3 .left-carousel,
+.header-7-3 .right-carousel {
+    width: 100%;
+}
+
+.header-7-3 .left-carousel {
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 576px) {
+    .header-7-3 .title-font {
+        font: normal 3rem/1.25 "Red Hat Display", sans-serif;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-7-3 .main-top {
+        padding: 3rem 4rem 2.75rem;
+    }
+
+    .header-7-3 .main-bottom {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .header-7-3 .left-carousel {
+        margin-bottom: 6rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-7-3 {
+        background-image: url("http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header7/Header-7-10.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .header-7-3 .main-top {
+        padding: 6rem 5rem 2.75rem;
+    }
+
+    .header-7-3 .main-bottom {
+        padding-left: 5rem;
+        padding-right: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    .header-7-3 .left-carousel {
+        width: 20%;
+        margin-bottom: 0rem;
+    }
+
+    .header-7-3 .right-carousel {
+        width: 80%;
+    }
+
+    .header-7-3 .title-font {
+        font: normal 3.5rem/1.25 "Red Hat Display", sans-serif;
+    }
+
+    .header-7-3 .owl-theme .owl-dots,
+    .header-7-3 .owl-theme .owl-nav {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .header-7-3 #owl-header-7-3_1 .owl-carousel .owl-stage {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .header-7-3 #owl-header-7-3_1 .owl-stage-outer {
+        bottom: -180px;
+    }
+
+    .header-7-3 .owl-theme .owl-nav {
+        margin-top: 0px;
+    }
+
+    .header-7-3 .owl-carousel .owl-nav button.owl-next,
+    .header-7-3 .owl-carousel .owl-nav button.owl-prev {
+        padding: 30px !important;
+    }
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1380px) {
+
+    .header-7-3 .owl-theme .owl-dots,
+    .header-7-3 .owl-theme .owl-nav {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
+/* Content  2*/
+    .content-2-1 .btn:focus,
+    .content-2-1 .btn:active {
+    outline: none !important;
+    }
+
+    .content-2-1 .card-block {
+        padding: 1rem 1rem 5rem;
+        margin-top: 50px;
+      }
+
+      .content-2-1 .card {
+        padding: 1.75rem;
+        background-color: #ffffff;
+        border-radius: 0.75rem;
+        border: 1px solid #1E3864;
+      }
+
+      .content-2-1 .card-title {
+        font: 600 1.5rem/2rem;
+        margin-bottom: 0.625rem;
+        color: #000000;
+      }
+
+      .content-2-1 .card-caption {
+        font: 300 1rem/1.5rem;
+        color: #565656;
+        letter-spacing: 0.025em;
+        margin-bottom: 0;
+      }
+
+      .content-2-1 .btn-card {
+        font: 700 1rem/1.5rem;
+        background-color: #F9A71C;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        border-radius: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .content-2-1 .btn-card:hover {
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+
+      .content-2-1 .card-text {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .content-2-1 .grid-padding {
+        padding: 0rem 1rem 3rem;
+      }
+
+    .content-2-1 .grid-padding {
+    padding: 0rem 1rem 3rem;
+    }
+
+    @media (min-width: 576px) {
+    .content-2-1 .grid-padding {
+        padding: 0rem 2rem 3rem;
+    }
+
+    .content-2-1 .card-block {
+        padding: 3rem 2rem 5rem;
+    }
+    }
+
+    @media (min-width: 768px) {
+    .content-2-1 .grid-padding {
+        padding: 0rem 4rem 3rem;
+    }
+
+    .content-2-1 .card-block {
+        padding: 3rem 4rem 5rem;
+    }
+    }
+
+    @media (min-width: 992px) {
+    .content-2-1 .grid-padding {
+        padding: 1rem 6rem 3rem;
+    }
+
+    .content-2-1 .card-block {
+        padding: 3rem 6rem 5rem;
+    }
+
+    .content-2-1 .column {
+        padding: 0rem 2.25rem;
+    }
+    }
+
+    @media (min-width: 1200px) {
+        .content-2-1 .grid-padding {
+            padding: 1rem 10rem 3rem;
+        }
+
+        .content-2-1 .card-block {
+            padding: 3rem 6rem 5rem;
+        }
+
+        .content-2-1 .card-btn-space {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .content-2-1 .btn-card {
+            font: 700 1rem/1.5rem;
+            background-color: #F9A71C;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 200px;
+            border-radius: 0.75rem;
+            margin-bottom: 1.25rem;
+          }
+    }
+
+    @media (max-width: 980px) {
+        .content-2-1 .card-btn-space {
+            width: 100%;
+        }
+    }
