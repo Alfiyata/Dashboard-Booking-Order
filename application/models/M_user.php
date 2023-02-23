@@ -27,9 +27,23 @@ class M_user extends CI_Model {
 	{
 		$params['name'] = $post['fullname'];
 		$params['username'] = $post['user_name'];
+		$params['gender'] = $post['gender'];
+		$params['phone'] = $post['phone'];
 		$params['password'] = $post['password'];
 		$params['address'] = $post['address'] != "" ? $post['address'] : null;
 		$params['level'] = $post['level'];
+		$this->db->insert('users', $params);
+	}
+
+	public function add_register_user($post)
+	{
+		$params['name'] = $post['fullname'];
+		$params['username'] = $post['user_name'];
+		$params['gender'] = $post['gender'];
+		$params['password'] = $post['password'];
+		$params['phone'] = $post['phone'];
+		$params['address'] = $post['address'] != "" ? $post['address'] : null;
+		$params['level'] = 2;
 		$this->db->insert('users', $params);
 	}
 	

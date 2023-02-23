@@ -39,37 +39,37 @@
             <div class="row benefits">
                 <div class="col-md mt-md-0">
                     <div class="rectangle mx-auto">
-                        <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/benefit-job-1.png" alt="benefits-1" class="img-fluid">
+                        <img src="<?= base_url() ?>assets/img/eye.png" alt="benefits-1" class="img-fluid">
                         <div class="headline-benefit">
                             Eyelash Extensions
                         </div>
                         <div class="subheadline-benefit mt-2">
-                            Get yourself ready and join <br class="d-none d-md-block">
-                            our great adventures
+                            Lorem ipsum dolor sit amet. <br class="d-none d-md-block">
+                            Lorem, ipsum dolor.
                         </div>
                     </div>
                 </div>
                 <div class="col-md mt-5 mt-md-0">
                     <div class="rectangle mx-auto">
-                        <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/benefit-job-2.png" alt="benefits-1" class="img-fluid">
+                        <img src="<?= base_url() ?>assets/img/nail.png" alt="benefits-1" class="img-fluid">
                         <div class="headline-benefit">
                             Nails Art
                         </div>
                         <div class="subheadline-benefit mt-2">
-                            Answer the question that we’ve <br class="d-none d-md-block">
-                            prepared for your career
+                            Lorem ipsum dolor sit amet. <br class="d-none d-md-block">
+                            Lorem, ipsum dolor.
                         </div>
                     </div>
                 </div>
                 <div class="col-md mt-5 mt-md-0">
                     <div class="rectangle mx-auto">
-                        <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/benefit-job-2.png" alt="benefits-1" class="img-fluid">
+                        <img src="<?= base_url() ?>assets/img/lash.png" alt="benefits-1" class="img-fluid">
                         <div class="headline-benefit">
                             Lash Lift
                         </div>
                         <div class="subheadline-benefit mt-2">
-                            Answer the question that we’ve <br class="d-none d-md-block">
-                            prepared for your career
+                            Lorem ipsum dolor sit amet. <br class="d-none d-md-block">
+                            Lorem, ipsum dolor.
                         </div>
                     </div>
                 </div>
