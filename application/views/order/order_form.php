@@ -61,7 +61,7 @@
                     <table width="100%">
                         <tr>
                             <td style="vertical-align:top; width:30%">
-                                <label for="barcode">Barcode</label>
+                                <label for="barcode">Type</label>
                             </td>
                             <td>
                                 <div class="form-group input-group">
