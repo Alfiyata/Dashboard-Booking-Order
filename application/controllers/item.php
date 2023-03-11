@@ -181,7 +181,7 @@ class item extends CI_Controller {
 			$target_file = './uploads/product/'.$item->image;
 			unlink($target_file);
 		}
-
+    
 		$this->M_item->delete($id);
 		if($this->db->affected_rows() > 0)
 		{

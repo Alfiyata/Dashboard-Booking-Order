@@ -32,7 +32,7 @@
                             <th>Unit</th>
                             <th>Price</th>
                             <th>Stock</th>
-                            <th>Image</th>
+                            <th>image</th>
                             <th>Action</th>
                         </tr>
                     </thead>

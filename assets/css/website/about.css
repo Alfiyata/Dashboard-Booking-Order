@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    * {
+    font-family: 'Red Hat Display', sans-serif !important;
+    }
+
+    body .porto {
+      background-color: #ffffff;
+      padding: 50px 30px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      body .porto {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+
+    body .porto .headline {
+      font-size: 40px;
+      font-weight: 600;
+      color: #132247;
+      z-index: 1;
+    }
+
+    body .porto .sub-headline {
+      padding-top: 28px;
+      font-size: 18px !important;
+      text-align: justify !important;
+      font-weight: 400;
+      color: #888888;
+      z-index: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+      body .porto .sub-headline {
+        font-size: 24px;
+      }
+    }
+
+    body .porto .porto-img {
+      margin-top: 45px;
+    }
+
+    body .porto .porto-img div {
+      z-index: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+      body .porto .porto-img {
+        margin-top: 96px;
+      }
+    }
+
+    body .porto .porto-img-full {
+      z-index: 1;
+    }
+
+    @media only screen and (max-width: 768px) {
+      body .porto .porto-img-full {
+        width: 100px !important;
+      }
+    }
+
+    body .porto .porto-img-half {
+      z-index: 1;
+    }
+
+    @media only screen and (max-width: 768px) {
+      body .porto .porto-img-half {
+        height: 70px !important;
+      }
+    }
+
+    body .cl-light {
+      color: #EEEEEE;
+    }
+
+    body .cl-light-grey-2 {
+      color: #90BCB7;
+    }
+
+    body .font-lora {
+      font-family: 'Red Hat Display', sans-serif !important;
+    }
+
+    /* End Content 1 */
+
+
+
+    /* Content 2 */
+    body .featured-nft-purpish {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      background: #1E3864;
+    }
+
+    body .featured-nft-purpish .texts .headline {
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 140%;
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 768px) {
+      body .featured-nft-purpish .texts .headline {
+        font-size: 36px;
+      }
+    }
+
+    body .featured-nft-purpish .texts .card-creator {
+      margin-top: 48px;
+      width: 360px;
+      height: 540px;
+      border-radius: 10px;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.55%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.06)));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0.55%, rgba(255, 255, 255, 0.06) 100%);
+      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(25px);
+      border: 1px solid #FDBC12;
+    }
+
+    @media screen and (max-width: 768px) {
+      body .featured-nft-purpish .texts .card-creator {
+        width: 100%;
+        height: 510px;
+      }
+    }
+
+    body .featured-nft-purpish .texts .card-creator {
+      position: relative;
+      overflow: hidden;
+    }
+
+    body .featured-nft-purpish .texts .card-creator .header-card .cover_card-user {
+      border-radius: 10px 10px 0 0;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
+    body .featured-nft-purpish .texts .card-creator .card-content {
+      margin-top: 100px;
+    }
+
+    body .featured-nft-purpish .texts .card-creator .card-content img {
+      width: 140px;
+      height: 140px;
+      position: relative;
+    }
+
+    body .featured-nft-purpish .texts .card-creator .card-content .name {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin-top: 12px;
+    }
+
+    body .featured-nft-purpish .texts .card-creator .card-content .job {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 140%;
+      color: #c0c0c0;
+      margin: 12px 0px;
+    }
+
+    body .featured-nft-purpish .texts .card-creator .card-content .follow {
+      padding: 12px 28px;
+      background: #FDBC12;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 135%;
+      color: #1E3864;
+      margin-top: 48px;
+    }
+    /* End Content 2 */
+
+    
+
+    /* Content */
+    body .content {
+      background: #FFFFFF;
+    }
+
+    body .content .content {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    body .content .content .tagline {
+      font-family: 'Red Hat Display', sans-serif !important;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 27px;
+      /* identical to box height */
+      color: #132247;
+    }
+
+    body .content .content .headline {
+      font-family: 'Red Hat Display', sans-serif !important;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 67px;
+      color: #111F37;
+    }
+
+    body .content .content .subheadline {
+      font-family: 'Red Hat Display', sans-serif !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      /* or 156% */
+      color: #627492;
+    }
+
+    body .content .content .button-header {
+      margin-top: 40px;
+    }
+
+    body .content .content .button-header .btn-integrate {
+      width: 150px;
+      height: 50px;
+      background: #132247;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #ffffff;
+    }
+    /* End Content 3 */

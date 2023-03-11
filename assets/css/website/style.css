@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * {
+        font-family: 'Red Hat Display', sans-serif !important;
+      }
+
+      .header-7-2 .navbar-light .navbar-nav .nav-link {
+          letter-spacing: 0.1em;
+          color: #2c3a4f;
+          transition: 0.3s;
+      }
+
+      .header-7-2 .navbar-light .navbar-nav .nav-link.active,
+      .header-7-2 .navbar-light .navbar-nav .nav-link:hover {
+          font-weight: 600;
+      }
+
+      .header-7-2 .header-sticky.scrolled {
+          background-color: #fff !important;
+          transition: background-color 200ms linear, box-shadow 300ms linear;
+          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+      }
+
+      .header-7-2 .btn-header {
+          padding: 1rem 2.25rem;
+          font: 700 0.75rem/1rem "Inter", sans-serif;
+          border-radius: 999px;
+          letter-spacing: 0.1em;
+          color: #203864;
+          border: 1px solid #203864;
+          transition: 0.2s;
+      }
+
+      .header-7-2 .btn-header:hover {
+          color: #ffffff;
+          background-color: #203864;
+          border-color: #203864;
+          transition: 0.2s;
+      }
+
+      .header-7-2 .navbar {
+          padding: 1.5rem 2rem;
+      }
+
+      .header-7-2 button:focus {
+          outline: none;
+      }
+
+      @media (min-width: 576px) {
+      }
+
+      @media (min-width: 768px) {
+      }
+
+      @media (min-width: 992px) {
+          .header-7-2 .navbar {
+              padding: 1.5rem 3rem;
+          }
+      }
+
+      @media (min-width: 1200px) {}
+
+      @media (min-width: 1380px) {
+
+      }
+
+      @media (max-width: 1023px) {
+
+      }
+
+      /* Content 1 */
+
+      body .content {
+        background: #FFFFFF;
+      }
+
+      body .content .content {
+        padding-top: 50px;
+        padding-bottom: 90px;
+      }
+
+      body .content .content .headline {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 43px;
+        line-height: 50px;
+        color: #000000;
+      }
+
+      body .content .content .subheadline {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 156% */
+        color: #627492;
+      }
+
+      body .content .content .button-header {
+        margin-top: 40px;
+      }
+
+      body .content .content .button-header .btn-integrate {
+        width: 150px;
+        height: 50px;
+        background: #498BFA;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #ffffff;
+      }
+
+      body .content .content .button-header .btn-docs {
+        width: 150px;
+        height: 50px;
+        border: 1px solid #9BA8BE;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height */
+        text-align: center;
+        color: #627492;
+      }
+
+      @media (min-width: 360px) {
+        body .content .content{
+          padding-top: 1px;
+        }
+      }
+
+      /* Content 1 */
+      .header-5-2 .modal-item.modal {
+          top: 2rem;
+      }
+
+      .header-5-2 .hero {
+          padding-top: 72px;
+          padding-bottom: 72px;
+      }
+
+      .header-5-2 .btn:focus,
+      .header-5-2 .btn:active {
+          outline: none !important;
+      }
+
+      .header-5-2 .modal-item .modal-dialog .modal-content {
+          border-radius: 8px;
+      }
+
+      .header-5-2 .responsive li a {
+          padding: 1rem;
+      }
+
+      .header-5-2 .left-column {
+          margin-bottom: 0;
+          width: 100%;
+      }
+
+      .header-5-2 .right-column {
+          width: 100%;
+      }
+
+      .header-5-2 .title-text-big {
+          font: 700 2.25rem/2.5rem "Red Hat Display", sans-serif;
+          margin-bottom: 1rem;
+          color: #242336;
+      }
+
+      .header-5-2 .icon-item-caption {
+          font: 1.25rem/1.5rem "Red Hat Display", sans-serif;
+          margin-bottom: 3rem;
+          color: #626262;
+      }
+
+      .header-5-2 .btn-main {
+          font: 500 0.875rem/1.25rem "Red Hat Display", sans-serif;
+          border-radius: 999px;
+          padding: 1rem 2.75rem;
+          margin-bottom: 1rem;
+          background-color: #203864;
+      }
+
+      .header-5-2 .btn-main:hover {
+          background-color: #FDBC12;
+          color: #ffffff;
+      }
+
+      .header-5-2 .btn-main .btn-fill-arrow {
+          left: 0px;
+          transition: 0.4s;
+          position: relative;
+      }
+
+      .header-5-2 .btn-main:hover .btn-fill-arrow {
+          left: 3px;
+          transition: 0.4s;
+          position: relative;
+      }
+
+      .header-5-2 .card-container {
+          z-index: 999;
+      }
+
+      .header-5-2 .card-item {
+          padding: 1rem 1.25rem 1.75rem;
+          border-top-left-radius: 1.5rem;
+          border-bottom-right-radius: 1.5rem;
+          transition: 0.4s;
+          top: 0px;
+          left: 0px;
+          position: relative;
+      }
+
+      .header-5-2 .card-item:hover {
+          box-shadow: -4px 4px 10px 0px rgba(224, 224, 224, 0.25);
+          top: -3px;
+          left: 3px;
+          transition: 0.4s;
+          position: relative;
+      }
+
+      .header-5-2 .card-header-title {
+          font: 500 0.875rem/1.25rem "Red Hat Display", sans-serif;
+          color: #132247;
+          margin-bottom: 1px;
+      }
+
+      .header-5-2 .card-header-caption {
+          font: 500 0.75rem/1rem "Red Hat Display", sans-serif;
+          color: #FDBC12;
+          margin-bottom: 0;
+      }
+
+      .header-5-2 .card-working-name {
+          font: 500 0.75rem/1rem "Red Hat Display", sans-serif;
+          margin-bottom: 0.25rem;
+          color: #132247;
+      }
+
+      .header-5-2 .card-working-status {
+          font: 500 0.625rem/1rem "Red Hat Display", sans-serif;
+          color: #FDBC12;
+          margin-bottom: 0;
+      }
+
+      .header-5-2 .btn-card-item {
+          font: 600 0.75rem/1rem "Red Hat Display", sans-serif;
+          background-color: #6781b3;
+          color: #ffffff;
+          transition: 0.3s;
+          padding: 0.625rem 3.5rem;
+          border-radius: 0.5rem;
+      }
+
+      .header-5-2 .btn-card-item:hover {
+          background-color: #203864;
+          color: #ffffff;
+          transition: 0.3s;
+      }
+
+      .header-5-2 .dropdown-hover {
+          height: 100%;
+          padding: 0.5rem;
+      }
+
+      .header-5-2 .dropdown-hover:hover {
+          background-color: #F2F0FF;
+          border-radius: 0.75rem;
+      }
+
+      @media (min-width: 375px) {
+
+          .header-5-2 .dropdown-hover:hover .dropdown-icon-arrow {
+              display: block !important;
+          }
+      }
+
+      @media (min-width: 576px) {
+          .header-5-2 .modal-item .modal-dialog {
+              max-width: 95%;
+              border-radius: 12px;
+          }
+
+          .header-5-2 .title-text-big {
+              font-size: 3rem;
+              line-height: 1.2;
+          }
+
+          .header-5-2 .icon-item {
+              width: 50%;
+              margin-bottom: 2.75rem;
+          }
+
+          .header-5-2 .dropdown-hover {
+              padding: 1rem;
+          }
+
+      }
+
+      @media (min-width: 768px) {
+
+          .header-5-2 .left-column {
+              margin-bottom: 3rem;
+          }
+      }
+
+      @media (min-width: 992px) {
+
+          .header-5-2 .left-column {
+              width: 50%;
+              margin-bottom: 0;
+          }
+
+          .header-5-2 .right-column {
+              width: 50%;
+          }
+
+          .header-5-2 .card-container {
+              bottom: 6rem;
+              right: 2rem;
+              position: absolute !important;
+              box-shadow: #2a3759;
+          }
+
+          .header-5-2 .box-shadow {
+              box-shadow: 18px 20px 48px -8px rgba(132, 165, 176, 0.15);
+              -webkit-box-shadow: 18px 20px 48px -8px rgba(132, 165, 176, 0.15);
+              -moz-box-shadow: 18px 20px 48px -8px rgba(132, 165, 176, 0.15);
+          }
+
+          .header-5-2 .dropdown:hover .dropdown-icon-drop {
+              display: none !important;
+          }
+
+          .header-5-2 .dropdown:hover .dropdown-icon-close {
+              display: block !important;
+          }
+      }
+      /* End Content 1 */
+
+        /* Content 2 */
+        body .content {
+            background: #FFFFFF;
+          }
+    
+          body .content .content {
+            padding-top: 90px;
+            padding-bottom: 90px;
+          }
+    
+          body .content .content .tagline {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 27px;
+            /* identical to box height */
+            text-align: center;
+            color: #0D3ADB;
+          }
+    
+          body .content .content .headline {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 67px;
+            text-align: center;
+            color: #111F37;
+          }
+    
+          body .content .content .benefits {
+            margin-top: 50px;
+          }
+    
+          body .content .content .benefits .rectangle {
+            max-width: 302px;
+            max-height: 334px;
+            border: 1px solid #9BA8BE;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 26px;
+          }
+    
+          body .content .content .benefits .rectangle img {
+            margin-top: 50px;
+          }
+    
+          body .content .content .benefits .rectangle .headline-benefit {
+            margin-top: 40px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            /* identical to box height */
+            text-align: center;
+            color: #111F37;
+          }
+    
+          body .content .content .benefits .rectangle .subheadline-benefit {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            /* or 175% */
+            text-align: center;
+            color: #627492;
+            margin-bottom: 40px;
+          }
+
+      /* End Content 2 */

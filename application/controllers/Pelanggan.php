@@ -12,8 +12,6 @@ class Pelanggan extends CI_Controller {
 	
 	public function index()
 	{
-		
-		echo json_encode("oke");exit;
 		$data['row'] = $this->M_customer->get();
 		$this->template->load('template', 'customer/customer_data', $data);
 	}

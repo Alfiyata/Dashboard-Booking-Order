@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>POS System</title>
+  <title>Order System</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css">
@@ -17,14 +17,14 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini <?=$this->uri->segment(1) == 'order' ? 'sidebar-collapse' : null?>">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
     <a href="<?=base_url('dashboard')?>assets/index2.html" class="logo">
-      <span class="logo-mini"><b>P</b>OS</span>
-      <span class="logo-lg"><b>System</b>POS</span>
+      <span class="logo-mini"><b>OR</b>DER</span>
+      <span class="logo-lg"><b>Order</b>System</span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -111,21 +111,28 @@
             <i class="fa fa-th-large"></i> <span>Dashboard</span>
           </a>
         </li>
+        <?php if($this->fungsi->user_login()->level == 2 or 1) { ?> <!-- membatasi hak akses -->
 		    <li <?=$this->uri->segment(1) == 'order' ? 'class="active"' : ''?>>
-          <a href="#">
+          <a href="<?=site_url('order')?>">
             <i class="fa fa-cart-plus"></i> <span>Order</span>
           </a>
         </li>
+        <?php } ?>
+        <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
         <li <?=$this->uri->segment(1) == 'customer' ? 'class="active"' : ''?>>
           <a href="<?=site_url('customer')?>">
             <i class="fa fa-user"></i> <span>Customer</span>
           </a>
         </li>
+        <?php } ?>
+        <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
         <li <?=$this->uri->segment(1) == 'supplier' ? 'class="active"' : ''?>>
           <a href="<?=site_url('supplier')?>">
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
         </li>
+        <?php } ?>
+        <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
           <li class="treeview <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'unit' || $this->uri->segment(1) == 'item' ? 'active' : ''?>">
             <a href="#">
               <i class="fa fa-archive"></i>
@@ -140,6 +147,7 @@
               <li <?=$this->uri->segment(1) == 'item' ? 'class="active"' : ''?>><a href="<?=site_url('item')?>"><i class="fa fa-circle-o"></i> Items</a></li>
             </ul>
           </li>
+          <?php } ?>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
           <li <?=$this->uri->segment(1) == 'user' ? 'class="active"' : ''?>>
             <a href="<?=site_url('user')?>">
