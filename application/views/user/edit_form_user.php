@@ -70,7 +70,7 @@
                                 <select name="level" id="level" class="form-control">
                                     <?php $level = $this->input->post('level') ? $this->input->post('level') : $row->level ?>
                                     <option value="1">Super Admin</option>
-                                    <option value="2" <?= $level == 2 ? 'selected' : null?>>Admin</option>
+                                    <option value="2" <?= $level == 2 ? 'selected' : null?>>User</option>
                                 </select>
                                 <span class="help-block"><?=form_error('level')?></span>
                             </div>

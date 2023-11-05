@@ -17,7 +17,8 @@ class Registration extends CI_Controller {
 
     public function add()
     {
-            $post = $this->input->post(null, TRUE);
+        $post = $this->input->post(null, TRUE);
+        // echo json_encode($post);exit;
             $this->M_user->add_register_user($post);
             if($this->db->affected_rows() > 0)
             {

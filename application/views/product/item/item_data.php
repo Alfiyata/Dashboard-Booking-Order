@@ -30,7 +30,7 @@
                             <th>Category</th>
                             <th>Unit</th>
                             <th>Price</th>
-                            <th>Stock</th>
+                            <!-- <th>Stock</th> -->
                             <th>image</th>
                             <th>Action</th>
                         </tr>
@@ -46,7 +46,7 @@
                         <td><?=$data->category_name?></td>
                         <td><?=$data->unit_name?></td>
                         <td><?=$data->price?></td>
-                        <td><?=$data->stock?></td>
+                        <!-- <td><?=$data->stock?></td> -->
                         <td>
                             <?php if($data->image != null){ ?>
                                 <img src="<?=base_url('uploads/product/'.$data->image)?>" style="width:100px">

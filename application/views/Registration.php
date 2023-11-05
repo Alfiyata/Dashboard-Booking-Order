@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div style="margin-bottom: 1.75rem">
-                                    <label for="" class="d-block input-label">Name</label>
+                                    <label for="" class="d-block input-label">User Name</label>
                                     <div class="d-flex w-100 div-input form-group">
                                         <input class="input-field border-0 form-control" type="text" id="user_name" name="user_name" placeholder="Your Name" required />
                                     </div>
@@ -35,7 +35,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div style="margin-bottom: 1.75rem">
-                                    <label for="" class="d-block input-label">User Name</label>
+                                    <label for="" class="d-block input-label">Name</label>
                                     <div class="d-flex w-100 div-input form-group">
                                         <input class="input-field border-0 form-control" type="text" id="fullname" name="fullname" placeholder="Your User Name" required />
                                     </div>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <button class="btn btn-fill text-white d-block w-100" type="submit">
-                            Sing Up
+                            Sign up
                         </button>
                     </form>
                     <p class="text-center bottom-caption">

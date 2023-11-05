@@ -13,7 +13,6 @@ class M_item extends CI_Model {
 		if ($id !=null) {
 			$this->db->where('item_id', $id);
 		}
-		$this->db->where('item.created_by', $ci->session->userdata('userid'));
 		$query = $this->db->get();
 		return $query;
 	}

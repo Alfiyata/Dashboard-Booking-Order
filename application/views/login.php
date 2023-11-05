@@ -25,9 +25,9 @@
               src="<?=base_url()?>assets/img/website/nails.png"
               alt="" />
           </div>
-          <h3 class="title-text">Log In to booking</h3>
+          <h3 class="title-text">Login to booking</h3>
           <p class="caption-text">
-            Please log in using that account has<br />
+            Please login using that account has<br />
             registered on the website.
           </p>
           <?= $this->session->flashdata('message'); ?>
@@ -70,7 +70,7 @@
               </div>
             </div>
             <button class="btn btn-fill text-white d-block w-100" type="submit" name="login">
-              Log In
+              Login
             </button>
           </form>
           <p class="text-center bottom-caption">
