@@ -76,7 +76,7 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'          => 'pgsql:host=localhost;dbname=postgres',
 	'hostname'     => 'localhost',
-	'username'     => 'postgres',
+	'username'     => 'macbook',
 	'password'     => '123',
 	'database'     => 'postgres',
 	'dbdriver'     => 'pdo',

@@ -86,6 +86,7 @@ class item extends CI_Controller {
 		$this->load->library('upload', $config);
 
 		$post = $this->input->post(null, TRUE);
+		
 		if(isset($_POST['add']))
 		{
 			if($this->M_item->check_barcode($post['barcode'])->num_rows() > 0)

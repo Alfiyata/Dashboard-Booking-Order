@@ -19,48 +19,68 @@
                     <i class="fa fa-user-plus"></i> Create Booking
                 </a>
             </div>
+            <div class="pull-right" style="margin-right:20px !important;">
+                <?php if ($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
+                    <a href="<?= site_url('order/reporting') ?>" class="btn btn-success btn-flat">
+                        <i class="fa fa-file"></i> Download Report
+                    </a>
+                <?php } ?>
+            </div>
         </div>
         <div class="box-body table-responsive">
             <table class="table table-bordered table-striped" id="table1">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>No Booking</th>
+                        <th>Name</th>
+                        <th>Invoice</th>
                         <th>Type Booking</th>
                         <th>Date Booking</th>
                         <th>Total</th>
                         <th>Status</th>
+                        <?php if ($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
+                            <th <?= $this->uri->segment(1) == 'user' ? 'class="active"' : '' ?>>
+                                Bukti Transfer
+                            </th>
+                        <?php } ?>
+                        <th>Action</th>
                     </tr>
                 </thead>
-                <!-- <tbody>
+                <tbody>
                     <?php
                     $no = 1;
-                    foreach ($row->result() as $key => $data) { ?>
+                    foreach ($row as $key => $data) { ?>
                         <tr>
                             <td style="width:5%;"><?= $no++ ?></td>
-                            <td><?= $data->barcode ?></td>
-                            <td><?= $data->name ?></td>
-                            <td><?= $data->category_name ?></td>
-                            <td><?= $data->unit_name ?></td>
-                            <td><?= $data->price ?></td>
-                            <td><?= $data->stock ?></td>
+                            <td><?= $data->booking_name ?></td>
+                            <td><?= $data->invoice ?></td>
+                            <td><?= $data->type_name ?></td>
+                            <td><?= $data->date ?></td>
+                            <td><?= $data->grand_total ?></td>
+                            <td><?= $data->status ?></td>
                             <td>
-                                <?php if ($data->image != null) { ?>
-                                    <img src="<?= base_url('uploads/product/' . $data->image) ?>" style="width:100px">
+                                <?php if ($data->transfer_image != null) { ?>
+                                    <img src="<?= base_url('uploads/orders/' . $data->transfer_image) ?>" style="width:100px">
                                 <?php } ?>
                             </td>
                             <td class="text-center" width="160px">
-                                <a href="<?= site_url('item/edit/' . $data->item_id) ?>" class="btn btn-primary btn-xs btn-flat">
-                                    <i class="fa fa-pencil"></i> Update
-                                </a>
-                                <a href="<?= site_url('item/delete/' . $data->item_id) ?>" onclick="return confirm('Are you sure to delete?')" class="btn btn-danger btn-xs btn-flat">
-                                    <i class="fa fa-trash"></i> Delete
+                                <!-- <a href="<?= site_url('order/update_status/' . $data->order_id) ?>" onclick="return confirm('Are you sure you want to update the status?')" class="btn btn-success btn-xs btn-flat">
+                                    <i class="fa fa-pencil"></i> Confirm
+                                </a> -->
+                                <?php if ($this->fungsi->user_login()->level == 1) { ?>
+                                    <a href="<?= site_url('order/update_status/' . $data->order_id) ?>" onclick="return confirm('Are you sure you want to update the status?')" class="btn btn-success btn-xs btn-flat">
+                                        <i class="fa fa-pencil"></i> Confirm
+                                    </a>
+                                <?php } ?>
+
+                                <a href="<?= site_url('order/upload_transfer/' . $data->order_id) ?>" class="btn btn-primary btn-xs btn-flat">
+                                    <i class="fa fa-pencil"></i> Upload Bukti Transfer
                                 </a>
                             </td>
                         </tr>
                     <?php
                     } ?>
-                </tbody> -->
+                </tbody>
             </table>
         </div>
     </div>

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/login.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -68,12 +69,12 @@
           </li>
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+              <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?=$this->fungsi->user_login()->username?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
-                <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
                 <p>
                   <?=ucfirst($this->fungsi->user_login()->name)?>
                   <small><?=ucfirst($this->fungsi->user_login()->address)?></small>
@@ -98,7 +99,7 @@
     <section class="sidebar">
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+          <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?=ucfirst($this->fungsi->user_login()->name)?></p>
@@ -106,11 +107,11 @@
         </div>
       </div>
       <ul class="sidebar-menu" data-widget="tree">
-        <li <?=$this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'class="active"' : ''?>>
+        <!-- <li <?=$this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'class="active"' : ''?>>
           <a href="<?=site_url('dashboard')?>">
             <i class="fa fa-th-large"></i> <span>Dashboard</span>
           </a>
-        </li>
+        </li> -->
         <?php if($this->fungsi->user_login()->level == 2 or 1) { ?> <!-- membatasi hak akses -->
 		    <li <?=$this->uri->segment(1) == 'order' ? 'class="active"' : ''?>>
           <a href="<?=site_url('order')?>">
@@ -119,18 +120,18 @@
         </li>
         <?php } ?>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
-        <li <?=$this->uri->segment(1) == 'customer' ? 'class="active"' : ''?>>
+        <!-- <li <?=$this->uri->segment(1) == 'customer' ? 'class="active"' : ''?>>
           <a href="<?=site_url('customer')?>">
             <i class="fa fa-user"></i> <span>Customer</span>
           </a>
-        </li>
+        </li> -->
         <?php } ?>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
-        <li <?=$this->uri->segment(1) == 'supplier' ? 'class="active"' : ''?>>
+        <!-- <li <?=$this->uri->segment(1) == 'supplier' ? 'class="active"' : ''?>>
           <a href="<?=site_url('supplier')?>">
             <i class="fa fa-cart-plus"></i> <span>Supplier</span>
           </a>
-        </li>
+        </li> -->
         <?php } ?>
         <?php if($this->fungsi->user_login()->level == 1) { ?> <!-- membatasi hak akses -->
           <li class="treeview <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'unit' || $this->uri->segment(1) == 'item' ? 'active' : ''?>">
@@ -142,8 +143,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li <?=$this->uri->segment(1) == 'category' ? 'class="active"' : ''?>><a href="<?=site_url('category')?>"><i class="fa fa-circle-o"></i> Categories</a></li>
-              <li <?=$this->uri->segment(1) == 'unit' ? 'class="active"' : ''?>><a href="<?=site_url('unit')?>"><i class="fa fa-circle-o"></i> Units</a></li>
+              <!-- <li <?=$this->uri->segment(1) == 'category' ? 'class="active"' : ''?>><a href="<?=site_url('category')?>"><i class="fa fa-circle-o"></i> Categories</a></li> -->
+              <!-- <li <?=$this->uri->segment(1) == 'unit' ? 'class="active"' : ''?>><a href="<?=site_url('unit')?>"><i class="fa fa-circle-o"></i> Units</a></li> -->
               <li <?=$this->uri->segment(1) == 'item' ? 'class="active"' : ''?>><a href="<?=site_url('item')?>"><i class="fa fa-circle-o"></i> Items</a></li>
             </ul>
           </li>

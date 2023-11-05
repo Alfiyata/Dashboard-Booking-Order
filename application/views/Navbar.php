@@ -31,13 +31,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-5 gap-3">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="<?=site_url('home')?>">Home</a>
+                                <!-- <a class="nav-link" aria-current="page" href="<?=site_url('home')?>">Home</a> -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?=site_url('location')?>">Location</a>
+                                <!-- <a class="nav-link" href="<?=site_url('location')?>">Location</a> -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?=site_url('about')?>">About Us</a>
+                                <!-- <a class="nav-link" href="<?=site_url('about')?>">About Us</a> -->
                             </li>
                         </ul>
                         <div class="d-flex">
@@ -58,11 +58,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   class="container d-flex justify-content-between align-items-center m-auto flex-lg-row flex-column-reverse gap-4 position-relative">
                   <nav class="text-base d-flex align-items-center gap-3 text-gray-1">
                       <img src="<?=base_url()?>assets/img/website/Lashtive.png" alt="logo" style="width: 100px;">
-                    <p class="text-gray-1 m-0">© 2022 All rights reserved</p>
+                    <p class="text-gray-1 m-0">© 2023 All rights reserved</p>
                   </nav>
                   <div class="topnav-centered">
                     <p class="text-gray-1 m-0">
-                    Jl.Pegangsaan Dua, Klp. Gading Jakarta Utara 14250
+                    Jl. Gilisampeng Kemanggisan Jakarta Barat
                     </p>
                   </div>
                   <div class="d-flex gap-lg-4">
