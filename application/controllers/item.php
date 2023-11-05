@@ -16,6 +16,8 @@ class item extends CI_Controller {
 	{
 
 		$data['row'] = $this->M_item->get();
+		$data['user_id'] = $this->M_item->user_id();
+		// echo json_encode($data['user_id']);exit;
 		$this->template->load('template', 'product/item/item_data', $data);
 	}
 
@@ -180,7 +182,7 @@ class item extends CI_Controller {
 			$target_file = './uploads/product/'.$item->image;
 			unlink($target_file);
 		}
-		
+    
 		$this->M_item->delete($id);
 		if($this->db->affected_rows() > 0)
 		{
