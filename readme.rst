@@ -1,3 +1,10 @@
+This my project Booking Order simple by PHP CodeIgniter 3
+Feature:
+[x] booking by day and time
+[x] Monthly data report
+[x] List Order
+[x] Previlage by admin or super admin  
+
 ###################
 What is CodeIgniter
 ###################
